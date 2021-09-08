@@ -16,13 +16,13 @@ export default function Navigation(){
 	const screenOptions = (route, color) =>{
 		let iconName
 		switch (route.name) {
-			case "restaurants":
+			case "restaurantes":
 				iconName = "compass-outline"
 				break;
-			case "favorites":
+			case "favoritos":
 				iconName = "heart-outline"
 				break;
-			case "toprestaurants":
+			case "toprestaurantes":
 				iconName = "star-outline"
 				break;
 			case "search":
@@ -45,7 +45,7 @@ export default function Navigation(){
 		<NavigationContainer>
 			<Tab.Navigator
 			initialRouteName="restaurants"
-			tabBarOptions={{
+			screenOptions={{
 				tabBarStyle: { position: 'absolute' },
 				"tabBarInactiveTintColor":"#a17dc3",
 				"tabBarActiveTintColor":"#442484"
@@ -63,7 +63,7 @@ export default function Navigation(){
 				<Tab.Screen
 					name="favoritos"
 					component={FavoritesStack}
-					options={{title:"Favoritos"}}
+					options={{title:"Favorites"}}
 				/>
 				<Tab.Screen
 					name="toprestaurantes"
@@ -73,12 +73,12 @@ export default function Navigation(){
 				<Tab.Screen
 					name="search"
 					component={SearchStack}
-					options={{title:"Buscar"}}
+					options={{title:"Search"}}  //First Component
 				/>
 				<Tab.Screen
 					name="account"
 					component={AccountStack}
-					options={{title:"Cuenta"}}
+					options={{title:"Account"}}
 				/>
 			</Tab.Navigator>
 		</NavigationContainer>
