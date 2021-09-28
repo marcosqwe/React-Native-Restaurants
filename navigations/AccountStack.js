@@ -9,7 +9,7 @@ export default function AccountStack() {
     return (
         <Stack.Navigator>
             <Stack.Screen
-            name="accounts"
+            name="accounts"     
             component={Account}
             options={{title:"Cuenta"}}
             />
